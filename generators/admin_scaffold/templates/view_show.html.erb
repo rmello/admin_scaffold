@@ -1,0 +1,10 @@
+<% for attribute in attributes -%>
+<p>
+  <b><%= attribute.column.human_name %>:</b>
+  <%%=h @<%= singular_name %>.<%= attribute.name %> %>
+</p>
+
+<% end -%>
+
+<%%= link_to 'Edit', edit_<%= controller_class_nesting_downcase %>_<%= singular_name %>_path(@<%= singular_name %>) %> |
+<%%= link_to 'Back', <%= controller_class_nesting_downcase %>_<%= plural_name %>_path %>
